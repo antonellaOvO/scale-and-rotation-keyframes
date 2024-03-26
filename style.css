@@ -1,3 +1,44 @@
-body {
-  background-color: red;
+main {
+  text-align: center;
+  margin-top: 100px;
+  font-family: "Lexend Tera", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+div {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: auto;
+  clip-path: circle(28% at 50% 50%);
+  animation: rot-scale 5s linear infinite;
+}
+
+p {
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  transition: all 1s;
+}
+
+span {
+  color: darkcyan;
+}
+
+@keyframes rot-scale {
+  0% {
+    transform: scale(1.2) perspective(23rem);
+  }
+
+  50% {
+    transform: rotateY(45deg) rotateX(45deg);
+  }
 }
