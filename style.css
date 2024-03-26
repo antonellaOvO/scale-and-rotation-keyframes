@@ -1,36 +1,42 @@
-main {
-  text-align: center;
+body {
   margin-top: 100px;
   font-family: "Lexend Tera", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
-div {
+.container {
   position: relative;
-  width: 100%;
+  width: 900px;
   height: auto;
 }
 
+.img-div {
+}
+
+.text-div {
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  color: white;
+  animation: rot-scale 5s linear infinite;
+}
+
 img {
-  top: 0;
-  left: 15%;
   width: 70%;
   height: auto;
   clip-path: circle(28% at 50% 50%);
   animation: rot-scale 5s linear infinite;
 }
 
-p {
-  position: absolute;
-  bottom: 50%;
-  left: 40%;
-  transition: all 1s;
-}
-
 span {
   color: darkcyan;
+}
+
+img:hover {
+  clip-path: none;
 }
 
 @keyframes rot-scale {
@@ -39,6 +45,6 @@ span {
   }
 
   50% {
-    transform: rotateY(45deg) rotateX(45deg);
+    transform: rotateY(45deg);
   }
 }
